@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}GALLERY{% endblock %}
+
+
+
+
+{% block content %}
+
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          Category
+        </div>
+        <div class="dropdown          <button class="btn btn-dark dropdown-toggle btn-block" type="button" id="categoryDropdown" data
+											
+																  -bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            All items
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+            <li><a class="dropdown-item" href="#">All items</a></li>
+            {% for category in categories %}
+            <li><a class="dropdown-item" href="#">{{category.name}}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <a href="{% url 'famy:add' %}" class="btn btn-dark btn-block btn-sm m-1">Add Photo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+      <div class= "col-md-9">
+     <div class= "row">
+
+          {% for photo in photos %}
+          <div class="col-md-4">
+            <div class="card">
+              <img src="{{photo.image.url}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Category:{{photo.Category.name}}.</p>
+                <a href="{% url 'famy:photo' photo.id %}" class="btn btn-outline-dark btn-sm m-1">View</a>
+              </div>
+            </div>
+          </div>
+         {% empty %}
+         <h3>no photos.....</h3> 
+          {% endfor %}
+          <!-- Add more image cards here if needed -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+{% endblock %}
+

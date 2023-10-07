@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="gallery">
+    <div class="image">
+      <img src="image1.jpg" alt="Image 1">
+      <div class="caption">
+        This is image 1.
+      </div>
+    </div>
+    <div class="image">
+      <img src="image2.jpg" alt="Image 2">
+      <div class="caption">
+        This is image 2.
+      </div>
+    </div>
+    <div class="image">
+        <img src="{% static 'famy/clement.jpg' %}" alt="Image 3" style="width: 33%;">
+      <div class="caption">
+        This is image 3.
+      </div>
+    </div>
+  </div>
+</body>
+</html>

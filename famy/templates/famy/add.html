@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+
+{% block content %}
+
+
+  <title>photo</title>
+  
+</head>
+
+<body class="my-3">
+
+
+ <div class="container-fluid my-5">
+   <div class="row justify-content-center">
+     <div class= "col-md-6">
+       <h1>Add Photo Here</h1>      
+       
+      <div class="card">
+        <form method= POST action="" enctype="multipart/form-data">
+         {% csrf_token %}
+         <div class="form-group m-3">
+            <label for="id_description">Description</label>         
+            <input required name="description" id= "id_description" type="text" placeholder="enter description" class=" form-control>
+         </div>
+
+
+         <div class="form-group m-3">
+            <label>Select a category</label>
+            <select name="category" class="form-control"> 
+             <option value='none'>Select a category...</option>
+             {% for category in categories %}
+
+               <option value="{{category.id}}">{{category.name}}</option>
+             {% endfor %}
+            </select>
+         </div>
+
+         <div class="form-group m-3">
+            <label for="id_category_new">Create new Category</label>
+            <input name="category_new" id= "id_category_new" type="text" placeholder="enter new category" class="form-control>
+         </div>
+
+
+         <div class="form-group m-3">
+            <label>Upload-file</label>
+            <input required name="image" type="file" class="form-control-file">
+         </div>
+         
+        <div class="d-flex justify-content-between">
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <a href="{% url 'famy:gallery' %}" class="btn btn-secondary">Go Back</a>
+        </div>
+        </form>
+       
+       </div>
+     </div>
+   </div>
+ </div>
+
+<style>
+  /* Style the "Description" input field */
+  #id_description {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+
+   }
+</style>
+
+<style>
+  /* Style the "Create new Category" input field */
+  #id_category_new {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    /* Add any other custom styles as needed */
+  }
+
+
+</style>
+
+</body>
+
+{% endblock %}
+

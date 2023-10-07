@@ -1,0 +1,364 @@
+   h1 {
+  color: red;
+   font-family: "Helvetica", Arial, sans-serif;
+
+  text-align:center;
+  font-size: 70px;
+}
+
+h2 {
+  color: white;
+   font-family: "Helvetica", Arial, sans-serif;
+
+  text-align:left;
+  font-size: 60px;
+}
+
+
+h3 {
+  color: white;
+   font-family: "Helvetica", Arial, sans-serif;
+
+  text-align:left;
+  font-size: 40px;
+  
+}
+
+
+
+h5{
+  text-align: center;
+  
+}
+
+body{
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      width:100%;
+      background-color: white;
+
+    }
+
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 25px;
+      text-align: center;
+      width:100%;
+    }
+nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 10px;
+      font-size: 30px;
+      padding:10px;
+}
+
+
+.nav-button:active,
+.nav-button:visited {
+  background-color: maroon; 
+  color: #fff;
+}
+
+.full-screen-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+  }
+
+#id_message {
+    width: 100%;
+    /* Adjust the desired width as needed, e.g., width: 400px; */
+  }
+
+
+  .#id_description {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    /* Add any other custom styles as needed */
+  }
+
+.image-container{
+display:flex;
+width: 100%;
+height: 200px;
+
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.banner-card{
+  position: relative;
+}
+
+.banner-card img {
+  max-width: 100%;
+  height: auto;
+  
+  opacity: 0.9;
+}
+
+.banner-text {
+  position: absolute;
+  padding: 0px;
+  top: 9px;
+  left: 12px;
+  
+  color: white
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow for better visibility */
+
+
+}
+
+.banner-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Adjust the width to control the area to be blurred */
+  height: 100%;
+  background: rgba(0, 0, 0, 1); /* Adjust the background color and opacity for the blur effect */
+  backdrop-filter: blur(8px); /* Adjust the blur radius as needed */
+}
+
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group textarea {
+  width: 50%;
+  height: 150px;
+  resize: vertical;
+}
+
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.card-space {
+  margin: 5px;
+}
+
+
+.footer {
+  background-color: gray;
+  color: white;
+  padding: 20px;
+}
+
+.social-media img{
+  padding: 10px; 
+  
+ 
+}
+
+
+.article-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.article-container {
+  flex: 0 0 calc(33.33% - 20px); /* Adjust the width as needed */
+  background-color: #f1f1f1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.article-container h2 {
+  color: #333;
+}
+
+.article-container p {
+  margin-bottom: 20px;
+}
+
+.see-more-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.see-more-btn:hover {
+  background-color: #0056b3;
+}
+.mey{
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+}
+
+.gean{
+  background-color: #444;
+  color: #fff;
+  font-size: 20px;
+  
+}
+
+.hean{
+  background-color: white;
+  color:#000;
+  font-size: 20px;
+  
+}
+
+.iean{
+  background-color: white;
+  color:black;
+  font-size: 20px;
+  
+}
+
+/* styles.css */
+.list-group-item a.text-decoration-none {
+  color: Black; 
+}
+
+
+.img-thumbnail {
+  width: 400px;
+  height: 400px;
+  
+}
+
+
+
+@media (max-width: 480px) {
+    h1 {
+
+        color: maroon;
+        font-size:20px;
+    }
+
+
+h2 {
+  color: white;
+   font-family: "Helvetica", Arial, sans-serif;
+
+  text-align:left;
+  font-size: 20px;
+}
+
+
+
+h3 {
+  color: white;
+   font-family: "Helvetica", Arial, sans-serif;
+
+  text-align:left;
+  font-size: 20px;
+  
+}
+   
+   
+    nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+      width:100%;
+      
+      }
+
+      nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 5px;                                                
+      font-size: 10px;
+}
+
+.image-container{
+display:flex;
+max-width: 100%;
+height: 50px;
+
+}
+
+
+.image-container img {
+  max-width: 100%;
+  height:50px;
+}
+
+.form-group textarea {
+  width: 85%;
+  height: 150px;
+resize: vertical;    
+  
+  }
+
+
+.reduced-container {
+    width: 50%;
+    height: 50%;
+}
+
+
+
+.card-space {
+  margin: 10px;
+  
+  
+}
+
+.mey{
+  background-color: #333;
+  color: #fff;
+  font-size: 15px;
+}
+
+.banner-text {
+  position: absolute;
+  padding: 0px;
+  top: 8px;
+  left: 12px;
+  margin: 0px;
+  color: white
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.article-row {
+  
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.article-container {
+  flex: 100%; /* Adjust the width as needed */
+  background-color: #f1f1f1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  
+}
+

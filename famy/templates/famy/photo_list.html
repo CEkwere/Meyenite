@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} Photo - Gallery{% endblock %}
+
+{% block content %}
+  <h1>{{ gallery_item.title }}</h1>
+  <img src="{{ gallery_item.image.url }}" alt="{{ gallery_item.title }}">
+  <p>{{ gallery_item.description }}</p>
+  <a href="{% url 'famy:display_photo' gallery_id=gallery_item.id %}">View Photo</a>
+{% endblock %}
+

@@ -1,0 +1,41 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <h1>Photo Album Detail</h1>
+  
+   <main>
+        <div class="gallery">
+            <div class="gallery-row">
+                <div class="gallery-item">
+                      <img src="{% static 'famy/clement.jpg' %}" alt="Image 3" >
+                    <div class="overlay">
+                        <h3>Image 1</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                     <img src="{% static 'famy/clement.jpg' %}" alt="Image 3" >
+                    <div class="overlay">
+                        <h3>Image 2</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-row">
+                <div class="gallery-item">
+                    <img src="{% static 'famy/clement.jpg' %}" alt="Image 3" >
+                    <div class="overlay">
+                        <h3>Image 3</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                      <img src="{% static 'famy/clement.jpg' %}" alt="Image 3" >
+                    <div class="overlay">
+                        <h3>Image 4</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more gallery rows and items as needed -->
+        </div>
+    </main>
+{% endblock %}
